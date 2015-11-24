@@ -1,0 +1,30 @@
+<h3>Put the question and options here: </h3>
+<form class="form-horizontal">
+	<div class="form-group">
+		<label for="surveyTitle">Question:</label>
+		<input id="surveyTitle" class="form-control" type="text" ng-model="MainCtrl.newSurvey.title">
+	</div>
+	<div class="form-group">
+		<label for="surveyOption1">Option1:</label>
+		<input id="surveyOption1" class="form-control" type="text" ng-model="MainCtrl.newSurvey.option1">
+	</div>
+	<div class="form-group">
+		<label for="surveyOption2">Option2:</label>
+		<input id="surveyOption2" class="form-control" type="text" ng-model="MainCtrl.newSurvey.option2">
+	</div>
+	<div class="form-group">
+		<label for="surveyOption3">Option3:</label>
+		<input id="surveyOption3" class="form-control" type="text" ng-model="MainCtrl.newSurvey.option3">
+	</div>
+	<div class="form-group">
+		<label for="surveyOption4">Option4:</label>
+		<input id="surveyOption4" class="form-control" type="text" ng-model="MainCtrl.newSurvey.option4">
+	</div>
+	 <div class="form-group">
+		<button type="submit" class="btn btn-success" ng-click="MainCtrl.addSurvey()">Create Poll</button>
+	</div>
+</form>
+<div class="row">
+	<a href="#/main"><button class="btn btn-warning">Go back</button></a>
+	<button class="btn btn-danger" ng-click="MainCtrl.logOut()">Log out</button>
+</div>

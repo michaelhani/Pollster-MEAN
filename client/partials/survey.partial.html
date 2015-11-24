@@ -1,0 +1,18 @@
+<h3 ng-bind="displaySurvey.title"></h3>
+<p>click a button (or don't, i'm not a cop)</p>
+<table class="table">
+	<thead>
+		<th>Option</th>
+		<th>Current number of votes</th>
+		<th>Action</th>
+	</thead>
+	<tbody>
+		<tr ng-repeat="option in displaySurvey.options">
+			<td ng-bind="option.title"></td>
+			<td ng-bind="option.likes"></td>
+			<td><button class="btn btn-success" ng-click="MainCtrl.vote(option._id)">Vote</button></td>
+		</tr>
+	</tbody>
+</table>
+<a href="#/main"><button class="btn btn-primary">Back to Main</button></a>
+<button class="btn btn-danger" ng-click="MainCtrl.logOut()">Log out</button>

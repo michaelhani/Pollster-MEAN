@@ -1,0 +1,19 @@
+<h3>Active Polls</h3>
+<table class="table">
+	<thead>
+		<th>Name</th>
+		<th>Question</th>
+		<th>Date Posted</th>
+		<th>Action</th>
+	</thead>
+	<tbody>
+		<tr ng-repeat="survey in surveys | orderBy:'created_at'">
+			<td ng-bind="survey.author"></td>
+			<td><a href ng-click="MainCtrl.showSurvey(survey._id)">{{survey.title}}</a></td>
+			<td ng-bind="survey.created_at | date:'shortDate'"></td>
+			<td><button class="btn btn-danger" ng-disabled="survey.author!=MainCtrl.currentUser" ng-click="MainCtrl.removeSurvey(survey)">Delete</button></td>
+		</tr>
+	</tbody>
+</table>
+<a href="#/newsurvey"><button class="btn btn-primary">Add a new survey</button></a>
+<button class="btn btn-danger" ng-click="MainCtrl.logOut()">Log out</button>
