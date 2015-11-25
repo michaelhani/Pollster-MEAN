@@ -5,7 +5,7 @@ app.use(bodyParser.json());
 app.use(express.static(__dirname+"/client"));
 require("./server/config/mongoose.js");
 require('./server/config/routes.js')(app);
-var port=8000;
+var port=process.env.PORT || 8000;
 app.listen(port, function(){
 	console.log("------------------");
 	console.log("-------"+port+"-------");
